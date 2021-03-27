@@ -1,0 +1,27 @@
+{
+  "manifest_version": "0.1",
+  "version": "3.7",
+  "name": "PH",
+  "description": "PH wealth tracker",
+  "app_name": "PH",
+  "short_name": "PH",
+  "scope": "/",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "prefer_related_applications": true,
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

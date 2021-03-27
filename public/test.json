@@ -1,0 +1,121 @@
+{
+    "dataArr": [
+        {
+            "assetClass": "cash",
+            "assetId": 49,
+            "assetType": "otherAccount",
+            "data": [
+                10000.0,
+                10000.0,
+                10000.0
+            ],
+            "id": 49,
+            "name": "Party cash",
+            "type": "Column"
+        },
+        {
+            "assetClass": "cash",
+            "assetId": 43,
+            "assetType": "cash",
+            "data": [
+                0,
+                0,
+                1840.1865
+            ],
+            "id": 43,
+            "name": "Borrow",
+            "type": "Column"
+        },
+        {
+            "assetClass": "realEstate",
+            "assetId": 35,
+            "assetType": "realEstate",
+            "data": [
+                0,
+                0,
+                6500.0
+            ],
+            "id": 35,
+            "name": "Farming Land near city",
+            "type": "Column"
+        },
+        {
+            "assetClass": "realEstate",
+            "assetId": 34,
+            "assetType": "realEstate",
+            "data": [
+                6000.0,
+                6000.0,
+                6000.0
+            ],
+            "id": 34,
+            "name": "Farming Land",
+            "type": "Column"
+        },
+        {
+            "assetClass": "realEstate",
+            "assetId": 36,
+            "assetType": "realEstate",
+            "data": [
+                0,
+                0,
+                3000.0
+            ],
+            "id": 36,
+            "name": "Residential Land in Village",
+            "type": "Column"
+        },
+        {
+            "assetClass": "privateFunds",
+            "assetId": 48,
+            "assetType": "privateEquityFunds",
+            "data": [
+                0,
+                0,
+                3680.373
+            ],
+            "id": 48,
+            "name": "Mills",
+            "type": "Column"
+        },
+        {
+            "assetClass": "publicFundsSecurities",
+            "assetId": 37,
+            "assetType": "mutualFunds",
+            "data": [
+                0,
+                0,
+                1840.1865
+            ],
+            "id": 37,
+            "name": "HDFC Funds",
+            "type": "Column"
+        },
+        {
+            "assetClass": "loan",
+            "assetId": 44,
+            "assetType": "loan",
+            "data": [
+                0,
+                0,
+                -2000.0
+            ],
+            "id": 44,
+            "name": "Car loan",
+            "type": "Column"
+        }
+    ],
+    "labelArr": [
+        "30/11/2020",
+        "31/12/2020",
+        "29/1/2021"
+    ],
+    "max_y": 30860.746,
+    "net_worth": [
+        16000.0,
+        16000.0,
+        30860.746
+    ],
+    "net_worth_latest": 30860.746,
+    "xirr": 23.4
+}

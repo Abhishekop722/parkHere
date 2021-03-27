@@ -1,0 +1,82 @@
+
+body {
+  margin: 0;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0 !important;
+}
+
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none !important;
+  margin: 0 !important; 
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.MuiTab-textColorInherit.Mui-selected {
+  border-bottom: 5px solid #006DEA;
+}
+
+/* ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3) !important; 
+  -webkit-border-radius: 10px !important;
+  border-radius: 10px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px !important;
+  border-radius: 10px !important;
+  background: rgba(255,255,255,0.4) !important; 
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5) !important; 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+opacity: 0.2 !important;
+} */
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+  height:7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: gray;
+  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: unset !important;
+}
+
+
+/* apex chart css */
+#pieChart .apexcharts-legend.position-right{
+  width: 50%;
+  top: 0px !important
+}
+#mobileChart .apexcharts-legend.position-right{
+  width: 50%;
+  top: 0px !important
+}
+#pieChart .apexcharts-inner{
+  transform: unset;
+}
