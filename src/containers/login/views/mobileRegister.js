@@ -16,7 +16,7 @@ const MobileSignupComp = (props) => {
     const dispatch = useDispatch()
     const { enqueueSnackbar } = useSnackbar();
 
-    const {loginLoader, RegisterPayload } = useSelector(state => ({
+    const { loginLoader, RegisterPayload } = useSelector(state => ({
         RegisterPayload: state.login.RegisterPayload,
         loginLoader: state.login.loginLoader
     }))
@@ -45,8 +45,8 @@ const MobileSignupComp = (props) => {
         },
         navLogo: {
             fontSize: '28px',
-            fontFamily:'Ubuntu Condensed',
-            color:'white'
+            fontFamily: 'Ubuntu Condensed',
+            color: 'white'
 
         },
         flexCenter: {
@@ -98,7 +98,7 @@ const MobileSignupComp = (props) => {
     const onChange = (prop) => (e) => {
         e.preventDefault()
         e.persist()
-        setValues(() => ({ ...values, [prop]: prop === 'email' ? e.target.value?.toLowerCase() : e.target.value }))
+        setValues(() => ({ ...values, [prop]: prop === 'email' ? e.target.value ?.toLowerCase() : e.target.value }))
     }
     const onSubmit = async () => {
         let { success, message } = await checkReqiredFields()
@@ -157,7 +157,15 @@ const MobileSignupComp = (props) => {
                         className={styles.mobileInput}
                         backgroundFill={true}
                         value={values.email} />
-
+                    <FormItem
+                        id={'mobile'}
+                        autoComplete={'username mobile'}
+                        label={'Mobile No.'}
+                        handleChange={onChange('mobile')}
+                        className={styles.mobileInput}
+                        backgroundFill={true}
+                        value={values.mobile} />
+                            
                     <FormItem inputType={'PASSWORD'}
                         handleChange={onChange('password')}
                         id={'password'}

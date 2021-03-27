@@ -158,12 +158,12 @@ const MobileLoginComp = (props) => {
                     e.preventDefault()
                 }}>
                     <FormItem
-                        id={'email'}
-                        autoComplete={'username email'}
+                        id={'mobile'}
+                        autoComplete={'username mobile'}
                         value={values.email}
-                        label={'Email Address'}
+                        label={'Mobile No.'}
                         className={styles.mobileInput}
-                        handleChange={onChange('email')} />
+                        handleChange={onChange('mobile')} />
 
 
                     <FormItem
@@ -190,11 +190,11 @@ const MobileLoginComp = (props) => {
                             }
                             label="Remember Me"
                         /> */}
-                        <div className={styles.forget} >
+                        {/* <div className={styles.forget} >
                             <a href='#' onClick={() => ResetPassword()}>
                                 Forgot Password?
                                 </a>
-                        </div>
+                        </div> */}
                     </div>
                     <FormItem inputType={'LOGINBUTTON'} label={'LOGIN'} className={styles.button} onClick={() => onSubmit()} />
                 </form>
