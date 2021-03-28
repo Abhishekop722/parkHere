@@ -229,13 +229,13 @@ function DrawerMenu(props) {
             }
             )}
             {redux.isMobile ? <>
-                <ListItem button component='a' className={clsx(classes.leftPadding)} target='__blank' href='https://www.PH.com/faq' >
+                <ListItem button component='a' className={clsx(classes.leftPadding)} target='__blank' href='https://www.PHB.com/faq' >
                     <ListItemIcon>
                         <LiveHelpOutlined />
                     </ListItemIcon>
                     <ListItemText title='FAQ' primary='FAQ' />
                 </ListItem>
-                <ListItem button component='a' className={clsx(classes.leftPadding)} target='__blank' href='mailto:support@PH.com?subject=PH: Help & Feedback' >
+                <ListItem button component='a' className={clsx(classes.leftPadding)} target='__blank' href='mailto:support@PHB.com?subject=PHB: Help & Feedback' >
                     <ListItemIcon>
                         <HelpOutline />
                     </ListItemIcon>

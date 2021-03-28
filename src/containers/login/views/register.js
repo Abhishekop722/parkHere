@@ -126,7 +126,7 @@ const SignupComp = (props) => {
                     <div className={classes.flexCenter}>
                         <img src={logo} className={styles.wealthLogo} />
                         <Typography className={classes.navLogo} varient='h4' color="primary" >
-                            Park Here
+                            Park Here Business
               </Typography>
                     </div>
                     <Typography className={styles.logos} varient='h6' >

@@ -74,21 +74,21 @@ export default () => {
 
       <Route exact path="/login" render={(route) => {
         return (
-          <DocumentTitle title={'PH | Login'}>
+          <DocumentTitle title={'PHB | Login'}>
             <Login />
           </ DocumentTitle>
         )
       }} />
       <Route exact path="/login/confirm" render={(route) => {
         return (
-          <DocumentTitle title={'PH | Login'}>
+          <DocumentTitle title={'PHB | Login'}>
             <Login />
           </ DocumentTitle>
         )
       }} />
       <Route exact path="/signup" render={(route) => {
         return (
-          <DocumentTitle title={'PH | Sign up'}>
+          <DocumentTitle title={'PHB | Sign up'}>
             <Login signup={true} />
           </ DocumentTitle>
         )

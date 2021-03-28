@@ -25,7 +25,7 @@ export default function Dashboard() {
     currentUser: state.global.currentUser
   }))
 
-  return (<DocumentTitle title='PH | Dashboard'>
+  return (<DocumentTitle title='PHB | Dashboard'>
     <div className={clsx({ [classes.root]: true, [classes.minusMargin]: isMobile })}>
       
     </div>

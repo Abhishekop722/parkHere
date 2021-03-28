@@ -99,7 +99,7 @@ function NavBar(props) {
                                 <div className={classes.logoWrapper} >
                                     <img style={{ width: '2em' }} onClick={onHome} className={classes.logo} src={'/logo.svg'} />
                                     <Typography variant="h6" color="inherit" className={classes.navLogo} >
-                                        Park Here
+                                        Park Here Business
                                 </Typography>
                                 </div>
                             </> :
@@ -128,7 +128,7 @@ function NavBar(props) {
                                 <img onClick={onHome} className={classes.logo} src={Logo} />
                                 {/* <img className={classes.marginLeft} src={'/wealthTracker.png'} /> */}
                                 <Typography variant="h4" color="primary" className={classes.navLogo} >
-                                    Park Here
+                                    Park Here Business
                                 </Typography>
                             </div>
                             <div className={classes.leftHead}>
@@ -138,10 +138,10 @@ function NavBar(props) {
                             </div>
                         </div>
                         <div className={classes.sideBtns}>
-                            <IconButton target='_blank' href="https://www.PH.com/faq" >
+                            <IconButton target='_blank' href="https://www.PHB.com/faq" >
                                 <LiveHelpOutlined />
                             </IconButton>
-                            <IconButton target='_blank' href="mailto:support@PH.com?subject=PH: Help & Feedback" >
+                            <IconButton target='_blank' href="mailto:support@PHB.com?subject=PHB: Help & Feedback" >
                                 <HelpOutline />
                             </IconButton>
                             <Divider orientation='vertical' flexItem />

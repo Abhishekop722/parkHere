@@ -89,7 +89,7 @@ function BasicLayout(props) {
       <NavBar item={item} currentUser={currentUser} />
       <Drawer currentUser={currentUser} isPathOpen={isPathOpen} onPathChange={onPathChange} />
       <Container className={classes.container}>
-        <DocumentTitle title={'PH | ' + item.title || item.name}>
+        <DocumentTitle title={'PHB | ' + item.title || item.name}>
           {!!component ? <Suspense fallback={<div>Loading...</div>}>
             {component}
           </Suspense> : <Exp />}

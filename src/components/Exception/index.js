@@ -35,7 +35,7 @@ function Exception(props) {
             </div>
             <div className={styles.content}>
                 <Typography variant="h1" className={styles.logoText} >
-                    Park Here
+                    Park Here Business
                 </Typography>
                 <h1>{title || config[pageType].title}</h1>
                 <div className={styles.desc}>{desc || config[pageType].desc}</div>

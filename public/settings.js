@@ -1,7 +1,7 @@
 import runtimeEnv from '@mars/heroku-js-runtime-env';
 const env = runtimeEnv()
 export const getIpAddressUrl = "https://api.ipify.org/?format=json"
-export const apiUrl = env.REACT_APP_API_URL || "https://PH-backend-dev.herokuapp.com"
+export const apiUrl = env.REACT_APP_API_URL || "https://PHB-backend-dev.herokuapp.com"
 export const getToken = () => {
     // return ({ 'headers': { 'Authorization': 'Bearer ' + "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MDE0NzI4NjQsInVzZXItZGF0YSI6eyJpZCI6ImhpLmhpbWFuc2h1MTRAZ21haWwuY29tIiwibmFtZSI6IkhpbWFuc2h1In19.emiOWCZEmpWXAWrwtTF8R8Y5h0O1euEzfZyOptd25mw" } })
     return ({ 'headers': { 'Authorization': 'Bearer ' + localStorage.getItem('token') } })
