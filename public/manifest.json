@@ -1,8 +1,8 @@
 {
   "manifest_version": "0.1",
-  "version": "3.7",
-  "name": "PH",
-  "description": "PH wealth tracker",
+  "version": "0.1",
+  "name": "Park Here",
+  "description": "PH",
   "app_name": "PH",
   "short_name": "PH",
   "scope": "/",
