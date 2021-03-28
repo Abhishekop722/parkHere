@@ -76,7 +76,7 @@ const SignupComp = (props) => {
         password: '',
         lat: null,
         long: null,
-        total_parking_slots: 1
+        total_parking_slots: null
     })
 
     useEffect(() => {

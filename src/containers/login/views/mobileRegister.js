@@ -71,10 +71,12 @@ const MobileSignupComp = (props) => {
     }))
     const classes = useStyles()
     const [values, setValues] = useState({
-        firstName: '',
-        lastName: '',
-        email: '',
+        parking_lot_name: '',
+        mobile: '',
         password: '',
+        lat: null,
+        long: null,
+        total_parking_slots: null
     })
 
     useEffect(() => {
@@ -87,29 +89,24 @@ const MobileSignupComp = (props) => {
 
     }, [RegisterPayload])
     const checkReqiredFields = () => {
-        if (!values.firstName) return ({ error: true, success: false, message: 'Enter first name' })
-        if (!values.lastName) return ({ error: true, success: false, message: 'Enter last name' })
-        if (!values.email) return ({ error: true, success: false, message: 'Enter Email Address' })
-        if (!values.password) return ({ error: true, success: false, message: 'Enter password' })
-        if (values.password.length < 9) return ({ error: true, success: false, message: 'Passoword Should be greater than 8 characters' })
+        if (!values.parking_lot_name) return ({ error: true, success: false, message: 'Please enter parking lot name.' })
+        if (!values.total_parking_slots) return ({ error: true, success: false, message: 'Please enter parking slots available.' })
+        if (!values.mobile) return ({ error: true, success: false, message: 'Please enter mobile no..' })
+        if (!values.password) return ({ error: true, success: false, message: 'Please enter password.' })
+        if (!values.lat) return ({ error: true, success: false, message: 'Please enter lattidtude coordinate.' })
+        if (!values.long) return ({ error: true, success: false, message: 'Please enter longitude coordinate.' })
 
         return ({ error: false, success: true })
     }
     const onChange = (prop) => (e) => {
         e.preventDefault()
         e.persist()
-        setValues(() => ({ ...values, [prop]: prop === 'email' ? e.target.value ?.toLowerCase() : e.target.value }))
+        setValues(() => ({ ...values, [prop]: prop === 'email' ? e.target.value?.toLowerCase() : e.target.value }))
     }
     const onSubmit = async () => {
         let { success, message } = await checkReqiredFields()
         if (success) {
-            let payload = {}
-            payload = {
-                ...payload,
-                ...values,
-                username: values.firstName + values.lastName,
-            }
-            dispatch(RegisterAction(payload, enqueueSnackbar))
+            dispatch(RegisterAction(values, enqueueSnackbar))
         } else {
             enqueueSnackbar(` ${message}`, {
                 variant: 'warning',
@@ -132,51 +129,50 @@ const MobileSignupComp = (props) => {
                     e.preventDefault()
                 }}>
                     <FormItem
-                        id={'firstName'}
-                        autoComplete={'firstName'}
-                        label={'First Name'}
-                        handleChange={onChange('firstName')}
-                        className={styles.mobileInput}
-                        backgroundFill={true}
-                        value={values.firstName} />
-
+                        value={values.parking_lot_name}
+                        id={'parking_lot_name'}
+                        autoComplete={'parking_lot_name'}
+                        label={'Parking Lot Name'}
+                        handleChange={onChange('parking_lot_name')}
+                    />
                     <FormItem
-                        id={'lastName'}
-                        autoComplete={'lastName'}
-                        label={'Last Name'}
-                        handleChange={onChange('lastName')}
-                        className={styles.mobileInput}
-                        backgroundFill={true}
-                        value={values.lastName} />
-
+                        value={values.total_parking_slots}
+                        id={'total_parking_slots'}
+                        autoComplete={'total_parking_slots'}
+                        label={'Parking Slots'}
+                        handleChange={onChange('total_parking_slots')}
+                    />
                     <FormItem
-                        id={'email'}
-                        autoComplete={'username email'}
-                        label={'Email Address'}
-                        handleChange={onChange('email')}
-                        className={styles.mobileInput}
-                        backgroundFill={true}
-                        value={values.email} />
+                        value={values.lat}
+                        id={'lattitude'}
+                        autoComplete={'lat'}
+                        label={'Lattitude'}
+                        handleChange={onChange('lat')}
+                    />
+                    <FormItem
+                        value={values.long}
+                        id={'longitiude'}
+                        autoComplete={'long'}
+                        label={'Longitude'}
+                        handleChange={onChange('long')}
+                    />
                     <FormItem
                         id={'mobile'}
                         autoComplete={'username mobile'}
+                        value={values.mobile}
                         label={'Mobile No.'}
-                        handleChange={onChange('mobile')}
-                        className={styles.mobileInput}
-                        backgroundFill={true}
-                        value={values.mobile} />
-                            
-                    <FormItem inputType={'PASSWORD'}
-                        handleChange={onChange('password')}
+                        handleChange={onChange('mobile')} />
+
+                    <FormItem
+                        inputType={'PASSWORD'}
                         id={'password'}
                         autoComplete={'new-password'}
-                        label={'Password'}
                         strength={true}
-                        className={styles.password}
+                        label={'Password'}
                         value={values.password}
+                        email={values.email}
                         showPassword={values.showPassword}
-                        backgroundFill={true} />
-
+                        handleChange={onChange('password')} />
                     <div className={styles.lower}>
 
                     </div>
