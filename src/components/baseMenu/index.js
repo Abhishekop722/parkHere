@@ -130,11 +130,6 @@ function DrawerMenu(props) {
         subscribeList: { maxHeight: '150px', overflow: 'auto', borderBottom: '1px solid gray' }
     }));
     const classes = useStyles();
-    const { ownerUser, manifestFile } = useSelector((state) => ({
-        ownerUser: state.global.ownerUser,
-        manifestFile: state.global.manifestFile
-    }))
-
 
     const pushOn = (path) => {
         dispatch({ type: 'TOGGLE_SIDEBAR_COLLAPSED' })
@@ -268,11 +263,11 @@ function DrawerMenu(props) {
         }}>
             <ListItemIcon>
 
-                <Avatar variant="circular" src={!ownerUser && currentUser && currentUser['profile_pic']} className={classes.avatar}>
-                    {((ownerUser?.name || currentUser?.name) || '')[0]}
+                <Avatar variant="circular" src={currentUser && currentUser['profile_pic']} className={classes.avatar}>
+                    {((currentUser?.parking_lot_name) || '')[0]}
                 </Avatar>
             </ListItemIcon>
-            <ListItemText primary={ownerUser?.name || currentUser?.name} />
+            <ListItemText primary={currentUser?.parking_lot_name} />
         </ListItem>
     </>)
     const renderMobileUser = () => (<div>
@@ -282,11 +277,11 @@ function DrawerMenu(props) {
         }}>
             <ListItemIcon>
 
-                <Avatar variant="circle" src={!ownerUser && currentUser && currentUser['profile_pic']} className={classes.avatar}>
-                    {((ownerUser?.name || currentUser?.name) || '')[0]}
+                <Avatar variant="circle" src={currentUser && currentUser['profile_pic']} className={classes.avatar}>
+                    {((currentUser?.parking_lot_name) || '')[0]}
                 </Avatar>
             </ListItemIcon>
-            <ListItemText primary={ownerUser?.name || currentUser?.name} />
+            <ListItemText primary={currentUser?.parking_lot_name} />
         </ListItem>
     </div>)
 
