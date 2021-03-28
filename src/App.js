@@ -9,7 +9,6 @@ import _ from 'lodash'
 import Exception from './components/Exception'
 import DocumentTitle from 'react-document-title'
 import { GetSubUserAction } from './containers/dashboard/actions/dashboardAction'
-const ResetPassword = React.lazy(() => import('./containers/login/views/resetPassword'));
 
 const Exp = () => (<Exception
   type="404"
@@ -84,13 +83,6 @@ export default () => {
         return (
           <DocumentTitle title={'PH | Login'}>
             <Login />
-          </ DocumentTitle>
-        )
-      }} />
-      <Route exact path="/resetPassword/:id" render={(route) => {
-        return (
-          <DocumentTitle title={'PH | Login'}>
-            <ResetPassword />
           </ DocumentTitle>
         )
       }} />

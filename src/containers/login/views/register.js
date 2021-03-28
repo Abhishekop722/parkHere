@@ -44,9 +44,9 @@ const SignupComp = (props) => {
             color: '#B9BDCA',
         },
         navLogo: {
-           fontSize: '28px',
-           fontFamily:'Ubuntu Condensed',
-           color:'white'
+            fontSize: '28px',
+            fontFamily: 'Ubuntu Condensed',
+            color: 'white'
 
         },
         flexCenter: {
@@ -71,10 +71,12 @@ const SignupComp = (props) => {
     }))
     const classes = useStyles()
     const [values, setValues] = useState({
-        firstName: '',
-        lastName: '',
-        email: '',
+        parking_lot_name: '',
+        mobile: '',
         password: '',
+        lat: null,
+        long: null,
+        total_parking_slots: 1
     })
 
     useEffect(() => {
@@ -87,14 +89,13 @@ const SignupComp = (props) => {
 
     }, [RegisterPayload])
     const checkReqiredFields = () => {
-        if (!values.firstName) return ({ error: true, success: false, message: 'Please enter first name.' })
-        if (!values.lastName) return ({ error: true, success: false, message: 'Please enter last name.' })
-        if (!values.email) return ({ error: true, success: false, message: 'Please enter email address.' })
+        if (!values.parking_lot_name) return ({ error: true, success: false, message: 'Please enter parking lot name.' })
+        if (!values.total_parking_slots) return ({ error: true, success: false, message: 'Please enter parking slots available.' })
+        if (!values.mobile) return ({ error: true, success: false, message: 'Please enter mobile no..' })
         if (!values.password) return ({ error: true, success: false, message: 'Please enter password.' })
-        if (values.password.length < 9) return ({ error: true, success: false, message: 'Password should be longer than 8 characters.' })
-        if (values.email === values.password.toLowerCase()) {
-            return ({ error: true, success: false, message: 'Email address and password must be different for your safety.' })
-        }
+        if (!values.lat) return ({ error: true, success: false, message: 'Please enter lattidtude coordinate.' })
+        if (!values.long) return ({ error: true, success: false, message: 'Please enter longitude coordinate.' })
+
         return ({ error: false, success: true })
     }
     const onChange = (prop) => (e) => {
@@ -105,13 +106,7 @@ const SignupComp = (props) => {
     const onSubmit = async () => {
         let { success, message } = await checkReqiredFields()
         if (success) {
-            let payload = {}
-            payload = {
-                ...payload,
-                ...values,
-                username: values.firstName + ' ' + values.lastName,
-            }
-            dispatch(RegisterAction(payload, enqueueSnackbar))
+            dispatch(RegisterAction(values, enqueueSnackbar))
         } else {
             enqueueSnackbar(` ${message}`, {
                 variant: 'warning',
@@ -143,25 +138,39 @@ const SignupComp = (props) => {
                         e.preventDefault()
                     }}>
                         <FormItem
-                            value={values.firstName}
-                            id={'firstName'}
-                            autoComplete={'firstName'}
-                            label={'First Name'}
-                            handleChange={onChange('firstName')}
+                            value={values.parking_lot_name}
+                            id={'parking_lot_name'}
+                            autoComplete={'parking_lot_name'}
+                            label={'Parking Lot Name'}
+                            handleChange={onChange('parking_lot_name')}
                         />
                         <FormItem
-                            id={'lastName'}
-                            autoComplete={'lastName'}
-                            value={values.lastName}
-                            label={'Last Name'}
-                            handleChange={onChange('lastName')} />
-
+                            value={values.total_parking_slots}
+                            id={'total_parking_slots'}
+                            autoComplete={'total_parking_slots'}
+                            label={'Parking Slots'}
+                            handleChange={onChange('total_parking_slots')}
+                        />
                         <FormItem
-                            id={'email'}
-                            autoComplete={'username email'}
-                            value={values.email}
-                            label={'Email Address'}
-                            handleChange={onChange('email')} />
+                            value={values.lat}
+                            id={'lattitude'}
+                            autoComplete={'lat'}
+                            label={'Lattitude'}
+                            handleChange={onChange('lat')}
+                        />
+                        <FormItem
+                            value={values.long}
+                            id={'longitiude'}
+                            autoComplete={'long'}
+                            label={'Longitude'}
+                            handleChange={onChange('long')}
+                        />
+                        <FormItem
+                            id={'mobile'}
+                            autoComplete={'username mobile'}
+                            value={values.mobile}
+                            label={'Mobile No.'}
+                            handleChange={onChange('mobile')} />
 
                         <FormItem
                             inputType={'PASSWORD'}
@@ -177,13 +186,6 @@ const SignupComp = (props) => {
                         <div className={styles.lower} />
                         <FormItem inputType={'LOGINBUTTON'} label={'REGISTER'} className={styles.button} onClick={() => onSubmit()} />
                     </form>
-                    <div className={styles.orLogin}>
-                        <Divider className={classes.divider} />
-                        <span>or Sign Up using</span>
-                        <Divider className={classes.divider} />
-                    </div>
-                   
-
                 </div>
             </div>
             <div className={styles.bottom}>
