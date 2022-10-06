@@ -5,10 +5,10 @@ export const apiUrl = env.REACT_APP_API_URL || "https://web-park-here.herokuapp.
 export const getToken = () => {
     let headerObj = {
         'headers': {
-            'Authorization': 'Bearer ' + localStorage.getItem('token')
+            'Authorization': 'Bearer ' + localStorage.getItem("token")
         }
     }
     return headerObj
 }
-export const DateFormat = 'DD MMM YYYY'
-export const DateTimeFormat = 'DD/MM/YYYY HH:mm:ss'
+export const DateFormat = "DD MMM YYYY"
+export const DateTimeFormat = "DD/MM/YYYY HH:mm:ss"
