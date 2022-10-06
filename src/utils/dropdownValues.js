@@ -1,5 +1,9 @@
 export const currencies = [
     {
+        value: 'Rupees',
+        label: '₹'
+    },
+    {
         value: 'USD',
         label: 'USD ($)',
     },
