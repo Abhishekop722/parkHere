@@ -1,6 +1,6 @@
 # ParkHere
 
-> ParkHere is an an app which solves the problem of finding parking spaces while you are travelling or your are in a new place where know nothing about a place but you need to safe place to park your vehicle, which is available on reasonable prices
+> This app is designed to solve the problem of finding parking spaces when travelling or in a new place where you don't know anything about the place but need safe parking, which is available at reasonable prices.
 
 To run the project, you can run the following command from root directory:
 
