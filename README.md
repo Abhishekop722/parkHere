@@ -2,7 +2,7 @@
 
 > This app is designed to solve the problem of finding parking spaces when travelling or in a new place where you don't know anything about the place but need safe parking, which is available at reasonable prices.
 
-To run the project, you can run the following command from root directory:
+## To run the project, you can run the following command from root directory:
 
 ### `yarn start`
 
