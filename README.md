@@ -1,7 +1,8 @@
+# ParkHere
 
-## Available Scripts
+> ParkHere is an an app which solves the problem of finding parking spaces while you are travelling or your are in a new place where know nothing about a place but you need to safe place to park your vehicle, which is available on reasonable prices
 
-In the project directory, you can run:
+To run the project, you can run the following command from root directory:
 
 ### `yarn start`
 
@@ -16,4 +17,3 @@ You will also see any lint errors in the console.
 
 Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
-
