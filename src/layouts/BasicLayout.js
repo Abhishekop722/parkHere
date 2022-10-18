@@ -26,6 +26,8 @@ function BasicLayout(props) {
     currentUser: state.global.currentUser
   }))
 
+  // Login signup useeffect 
+  
   useEffect(() => {
     if (!token || !currentUser) {
       dispatch(push('/login'))
@@ -34,6 +36,9 @@ function BasicLayout(props) {
   // console.log(redux)
   const { component, item , onPathChange, isPathOpen} = props
   // console.log(component)
+  
+  // styling for dashboards
+  
   const useStyles = makeStyles(theme => ({
     basicWraper: {
       display: 'flex',
